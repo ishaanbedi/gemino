@@ -94,6 +94,15 @@ const Navbar = () => {
                 Privacy
               </DropdownMenuItem>
               <DropdownMenuSeparator />
+              <DropdownMenuItem
+                className="cursor-pointer"
+                onClick={() => {
+                  router.push(`/home`);
+                }}
+              >
+                Home Page
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
               <DropdownMenuItem className="cursor-pointer">
                 <SignOutButton />
               </DropdownMenuItem>

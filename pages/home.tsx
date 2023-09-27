@@ -13,8 +13,9 @@ import {
 import Footer from "@/components/footer";
 import FAQ from "@/components/faq";
 import StatFeatures from "@/components/statFeatures";
-
+import { useUser } from "@clerk/nextjs";
 const HomePage = () => {
+    const { isSignedIn, user } = useUser();
     return (
         <>
             <HeroLanding />
@@ -140,6 +141,7 @@ const FeatureTemplate = (
 
 const HeroLanding = () => {
     const router = useRouter();
+    const { isSignedIn, user } = useUser();
     return (
         <div>
             <section className="mt-20">
@@ -160,11 +162,19 @@ const HeroLanding = () => {
                         </h3>
                     </div>
                     <div className="flex lg:md:sm:flex-row flex-col lg:md:sm:space-x-6 lg:md:sm:space-y-0 space-y-3 mt-8 lg:md:sm:w-1/2 w-full justify-center items-center">
-                        <Button
-                            onClick={() => router.push("/sign-up")}
-                            className="lg:md:sm:w-1/3 w-full">
-                            Get Started
-                        </Button>
+                        {isSignedIn ? (
+                            <Button
+                                onClick={() => router.push("/class")}
+                                className="lg:md:sm:w-1/3 w-full">
+                                Go to Classroom
+                            </Button>
+                        ) : (
+                            <Button
+                                onClick={() => router.push("/sign-up")}
+                                className="lg:md:sm:w-1/3 w-full">
+                                Get Started
+                            </Button>
+                        )}
                         <Button
                             onClick={() => router.push("#features")}
                             className="lg:md:sm:w-1/3 w-full border border-black" variant={"outline"}>
