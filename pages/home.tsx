@@ -15,7 +15,7 @@ import FAQ from "@/components/faq";
 import StatFeatures from "@/components/statFeatures";
 import { useUser } from "@clerk/nextjs";
 const HomePage = () => {
-    const { isSignedIn, user } = useUser();
+    const router = useRouter();
     return (
         <>
             <HeroLanding />
@@ -227,7 +227,7 @@ const OpenSourceFeature = () => {
         },
 
     ];
-
+    const router = useRouter();
     return (
         <section>
             <div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
@@ -244,14 +244,19 @@ const OpenSourceFeature = () => {
                         <p className="mt-4 text-gray-600">
                             Gemino is completely free and open source. Gemino is built with top-notch technologies and uses the best practices to ensure that you have a smooth learning experience.
                         </p>
-                        <Button className="mt-4 w-full flex items-center justify-center space-x-2">
+                        <Button
+                            onClick={() => {
+                                router.push("https://www.github.com/ishaanbedi/gemino");
+                            }
+                            }
+                            className="mt-4 w-full flex items-center justify-center space-x-2">
                             <Image src="/github.svg" width={16} height={16} alt="github" />
                             <span className="mt-1">
                                 View on Github
                             </span>
                         </Button>
                     </div>
-                    <div className="grid grid-cols-2 gap-1 gap-y-2 sm:grid-cols-3">
+                    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 justify-center items-center self-center content-center">
                         {items.map((item, index) => (
                             <HoverCard key={index}>
                                 <HoverCardTrigger>

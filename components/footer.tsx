@@ -29,9 +29,11 @@ const Footer = () => {
                 </div>
 
                 <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-                    <span className={`text-center text-4xl font-bold text-secondary-foreground flex justify-center ${font.className}`}>
-                        ib
-                    </span>
+                    <Link href="https://ishaanbedi.in" target="_blank">
+                        <span className={`text-center text-4xl font-bold text-secondary-foreground flex justify-center ${font.className}`}>
+                            ib
+                        </span>
+                    </Link>
                     <p
                         className="mx-auto mt-3 max-w-lg text-center leading-relaxed"
                     >
