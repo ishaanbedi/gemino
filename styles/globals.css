@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cl-profileSection__username {
+  display: none;
+}
+
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@layer utilities {
+  @variants responsive {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+}
+
+.FlashcardArrayWrapper__controls {
+  margin-top: 120px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#bob {
+  height: 250px;
+}
+
+#newsletter-card {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1004%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(0%2c 0%2c 0%2c 1)'%3e%3c/rect%3e%3cpath d='M1679.38 226.86C1536.01 234.99 1433.32 497.55 1171.76 495.66 910.19 493.77 840.82 17.5 664.13-26.09' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1581.3 177.41C1396.7 180.53 1235.66 413.3 881.25 412.61 526.85 411.92 389.34-25.09 181.21-44.76' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1713.91 516.41C1530.43 512.5 1393.11 273.14 1024.42 264.41 655.73 255.68 520.16-2.67 334.93-7.52' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1512.03 217.32C1359.56 210.22 1184.36-45.9 963.82-51.48 743.28-57.06 759.44-102.64 689.72-102.86' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1573.26 148.13C1385.05 150.91 1131.22 379.03 856.2 377.73 581.18 376.43 634.69-32.65 497.67-82.77' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1004'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+#sign-in-page {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1016%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M0%2c358.147C66.361%2c364.708%2c121.589%2c312.403%2c179.332%2c279.046C240.052%2c243.969%2c311.03%2c218.766%2c346.247%2c158.126C382.693%2c95.37%2c389.047%2c17.102%2c372.493%2c-53.556C356.598%2c-121.4%2c310.095%2c-177.557%2c257.024%2c-222.712C209.014%2c-263.561%2c148.683%2c-283.248%2c87.04%2c-296.431C29.137%2c-308.814%2c-28.546%2c-305.75%2c-86.997%2c-296.286C-152.965%2c-285.604%2c-235.958%2c-292.454%2c-274.534%2c-237.885C-313.669%2c-182.525%2c-268.212%2c-106.48%2c-269.096%2c-38.69C-269.835%2c17.971%2c-299.933%2c74.776%2c-279.299%2c127.552C-258.312%2c181.229%2c-202.348%2c209.009%2c-157.904%2c245.703C-107.046%2c287.692%2c-65.632%2c351.658%2c0%2c358.147' fill='%230b2035'%3e%3c/path%3e%3cpath d='M1440 900.012C1517.351 899.677 1602.295 955.605 1666.975 913.1800000000001 1731.732 870.7049999999999 1708.837 767.7239999999999 1745.599 699.562 1786.286 624.123 1895.847 580.582 1892.551 494.933 1889.317 410.897 1783.311 373.726 1730.54 308.246 1675.155 239.52300000000002 1658.948 127.53399999999999 1574.854 100.72800000000001 1490.94 73.97899999999998 1406.101 138.52100000000002 1328.443 180.07 1263.493 214.82 1219.9470000000001 272.994 1163.785 320.659 1095.204 378.86400000000003 979.225 402.998 961.794 491.244 944.543 578.578 1039.214 645.7 1084.432 722.383 1124.356 790.088 1141.446 880.024 1211.759 915.15 1281.379 949.9300000000001 1362.177 900.3489999999999 1440 900.012' fill='%23123559'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1016'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#sign-up-page {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1016%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M0%2c358.147C66.361%2c364.708%2c121.589%2c312.403%2c179.332%2c279.046C240.052%2c243.969%2c311.03%2c218.766%2c346.247%2c158.126C382.693%2c95.37%2c389.047%2c17.102%2c372.493%2c-53.556C356.598%2c-121.4%2c310.095%2c-177.557%2c257.024%2c-222.712C209.014%2c-263.561%2c148.683%2c-283.248%2c87.04%2c-296.431C29.137%2c-308.814%2c-28.546%2c-305.75%2c-86.997%2c-296.286C-152.965%2c-285.604%2c-235.958%2c-292.454%2c-274.534%2c-237.885C-313.669%2c-182.525%2c-268.212%2c-106.48%2c-269.096%2c-38.69C-269.835%2c17.971%2c-299.933%2c74.776%2c-279.299%2c127.552C-258.312%2c181.229%2c-202.348%2c209.009%2c-157.904%2c245.703C-107.046%2c287.692%2c-65.632%2c351.658%2c0%2c358.147' fill='%230b2035'%3e%3c/path%3e%3cpath d='M1440 900.012C1517.351 899.677 1602.295 955.605 1666.975 913.1800000000001 1731.732 870.7049999999999 1708.837 767.7239999999999 1745.599 699.562 1786.286 624.123 1895.847 580.582 1892.551 494.933 1889.317 410.897 1783.311 373.726 1730.54 308.246 1675.155 239.52300000000002 1658.948 127.53399999999999 1574.854 100.72800000000001 1490.94 73.97899999999998 1406.101 138.52100000000002 1328.443 180.07 1263.493 214.82 1219.9470000000001 272.994 1163.785 320.659 1095.204 378.86400000000003 979.225 402.998 961.794 491.244 944.543 578.578 1039.214 645.7 1084.432 722.383 1124.356 790.088 1141.446 880.024 1211.759 915.15 1281.379 949.9300000000001 1362.177 900.3489999999999 1440 900.012' fill='%23123559'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1016'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cl-formButtonPrimary {
+  background-color: #1f2937;
+  color: #fff;
+  border: 1px solid #1f2937;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.cl-footerActionLink{
+  color: #000;
+}
+
+.cl-internal-b3fm6y{
+  display: none;
+}
