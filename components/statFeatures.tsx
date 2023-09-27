@@ -11,9 +11,7 @@ const StatFeatures = () => {
                         </h2>
 
                         <p className="mt-4 text-primary sm:text-xl">
-                            We are constantly adding new features and addons to Gemino.
-                            <br />
-                            Here are some of the features we are most proud of:
+                        We are proud to present to you, the features that make Gemino, Gemino.
                         </p>
                     </div>
 
