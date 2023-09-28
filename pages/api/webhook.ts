@@ -38,7 +38,6 @@ export default async function handler(
         "Content-Type": "application/json",
       },
     });
-    res.status(201).json({});
     await axios.post(
       "https://objective-brown.cmd.outerbase.io/register-username",
       {
