@@ -50,13 +50,12 @@ const Flashcards: React.FC = () => {
 
     const handleAIFlashcards = async () => {
         setShowGenerating(true);
-        const { data } = await axios.post("/api/aiFlashcard", {
+        const data = await axios.post("/api/aiFlashcard", {
             words: words,
         });
-        console.log(data.response);
         setStartFlashcards(true);
         setShowGenerating(false);
-        setFlashCardJSON(data.response);
+        setFlashCardJSON(data.data.response);
     };
 
     useEffect(() => {

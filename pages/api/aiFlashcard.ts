@@ -1,7 +1,9 @@
-import { NextApiRequest as Request, NextApiResponse as Response } from "next";
 import { getAuth } from "@clerk/nextjs/server";
 import { OpenAI } from "openai";
-export const runtime = "edge";
+export const config = {
+  runtime: "edge",
+};
+
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
@@ -37,7 +39,7 @@ const schema = {
   required: ["response"],
 };
 
-export default async function handler(req: Request, res: Response) {
+export default async function handler(req: any, res: any) {
   const { userId } = getAuth(req);
   if (!userId) {
     res.status(401).json({ message: "Unauthorized" });
@@ -56,9 +58,5 @@ export default async function handler(req: Request, res: Response) {
     function_call: { name: "getFlashCardJson" },
     temperature: 0,
   });
-  res
-    .status(200)
-    .json(
-      JSON.parse(response.choices[0].message.function_call?.arguments as string)
-    );
+  return new Response(response.choices[0].message.function_call?.arguments);
 }
