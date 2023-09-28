@@ -63,7 +63,7 @@ const NewLevel = ({ level }: { level: number }) => {
     setTimeout(() => {
       setIsPaused(false);
       setCurrentQuestion(currentQuestion + 1);
-    }, 191);
+    }, 2000);
   };
 
   const successToast = () => {
@@ -72,11 +72,11 @@ const NewLevel = ({ level }: { level: number }) => {
 
     setIsToastVisible(true);
     toast.success("Correct Answer!", {
-      duration: 191,
+      duration: 2000,
     });
     setTimeout(() => {
       setIsToastVisible(false);
-    }, 191);
+    }, 2000);
   };
 
   const errorToast = (explanation: string) => {
@@ -84,11 +84,11 @@ const NewLevel = ({ level }: { level: number }) => {
     audio.play();
     setIsToastVisible(true);
     toast.error(explanation, {
-      duration: 191,
+      duration: 2000,
     });
     setTimeout(() => {
       setIsToastVisible(false);
-    }, 191);
+    }, 2000);
   };
   if (loading) {
     return (
