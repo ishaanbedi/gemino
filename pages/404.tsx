@@ -8,9 +8,9 @@ const NotFoundPage = () => {
             <NextSeo
                 title="Gemino - Page not found"
                 description="Gemino is an AI powered language learning platform that helps you learn faster."
-                canonical="https://gemino.vercel.app/"
+                canonical="https://gemino.ishn.codes/"
                 openGraph={{
-                    url: 'https://gemino.vercel.app/',
+                    url: 'https://gemino.ishn.codes/',
                     title: 'Gemino',
                     description: 'Gemino is an AI powered language learning platform that helps you learn faster.',
                     images: [
