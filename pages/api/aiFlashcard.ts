@@ -1,7 +1,7 @@
 import { NextApiRequest as Request, NextApiResponse as Response } from "next";
 import { getAuth } from "@clerk/nextjs/server";
 import { OpenAI } from "openai";
-
+export const runtime = "edge";
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
