@@ -37,7 +37,12 @@ const Footer = () => {
                     <p
                         className="mx-auto mt-3 max-w-lg text-center leading-relaxed"
                     >
-                        Gemino is developed by <Link className="underline underline-offset-2" target="_blank" href="https://ishaanbedi.in">Ishaan Bedi</Link> during the <Link className="underline underline-offset-2" href={'https://outerbase.com/'}> Outerbase Hackathon.</Link>
+                        Gemino is developed during the <Link target="_blank" className="underline underline-offset-2" href={'https://outerbase.com/'}> Outerbase</Link> + <Link target="_blank" className="underline underline-offset-2" href={'https://hashnode.com//'}> Hashnode</Link> <Link target="_blank" className="underline underline-offset-2" href={'https://hashnode.com/hackathons/outerbase/'}> hackathon</Link>.
+                    </p>
+                    <p
+                        className="mx-auto mt-3 max-w-lg text-center leading-relaxed"
+                    >
+                        A project by <Link target="_blank" className="underline underline-offset-2" href={'https://www.ishaanbedi.in'}> Ishaan Bedi</Link>.
                     </p>
                     <ul className="mt-6 flex justify-center gap-3 md:gap-5">
                         <li>
