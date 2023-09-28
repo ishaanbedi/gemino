@@ -9,6 +9,14 @@ import Link from "next/link";
 const FAQ = () => {
     const faqs = [
         {
+            question: "What is Gemino?",
+            answer: "Gemino is a gamified language learning platform that uses AI to help you learn a language.",
+        },
+        {
+            question: "How to best utilize Gemino?",
+            answer: "Each level is a gamified experience to learn a new concept of the language. Each question in a level will teach you something new. It's all a game of your memory. The more you play, the more you learn. After every level, try to write down the concepts you learned in that level. This will help you remember them better.",
+        },
+        {
             question: "Is Gemino free?",
             answer: "For now, yes. Since AI integration is expensive to run, we may have to charge a small fee in the future, based on the response we get from the community. We will always have a free tier, though.",
         },
@@ -23,6 +31,10 @@ const FAQ = () => {
         {
             question: "What can I learn on Gemino?",
             answer: `You can learn ${process.env.NEXT_PUBLIC_COURSE} on Gemino. Who knows, we might add more languages in the future.`,
+        },
+        {
+            question: "I found a mistake in a question, what do I do?",
+            answer: `Since it is the beginning of the project, there might be some mistakes in the questions. You can report a mistake by going through the support page and reporting a question. We will correct it out by referring to expert sources.`
         },
         {
             question: "How do I report a bug?",
