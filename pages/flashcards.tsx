@@ -39,7 +39,7 @@ const Flashcards: React.FC = () => {
         const url = `https://objective-brown.cmd.outerbase.io/get-words-for-revision?username=${user.user?.username}`;
         const response = await axios.get(url);
         setLoadingFromAPI(false);
-        if (response.data.response.items[0].words_user_must_revise === null) {
+        if (response.data.response.items[0].words_user_must_revise === null || response.data.response.items[0].words_user_must_revise === "") {
             setNewUser(true);
             return;
         }
