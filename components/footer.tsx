@@ -18,7 +18,7 @@ const Footer = () => {
                         <strong className="text-xl  sm:text-xl text-primary-foreground">
                             Ready to get started?
                         </strong>
-                        <Link href="/signup">
+                        <Link href="/sign-up">
                             <Button variant={"secondary"}>
                                 Sign up, it&apos;s free
                             </Button>
