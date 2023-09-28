@@ -46,8 +46,6 @@ export default async function handler(
             selectedTopic: requestData.topic,
           }),
         });
-
-        res.status(200).json(data);
       } catch (error) {
         res.status(400).json(error);
       }
@@ -62,8 +60,6 @@ export default async function handler(
             selectedTopic: requestData.topic,
           }),
         });
-
-        res.status(200).json(data);
       } catch (error) {
         res.status(400).json(error);
       }
