@@ -52,7 +52,7 @@ const Leaderboard: React.FC = () => {
         }}
       />
       {!leaderboard ? (
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center pb-24">
           <h1 className="text-2xl font-bold">Leaderboard</h1>
           <Card className="lg:md:sm:w-3/4 w-full mt-12 text-xl">
             <div className="py-3 flex justify-between items-center px-4">
