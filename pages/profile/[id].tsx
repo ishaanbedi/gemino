@@ -106,7 +106,7 @@ interface ProfileProps {
     id: string;
     image_url: string;
     last_name: string;
-    profile_image_url: string;
+    signup_image_url: string;
     first_name: string;
   };
   selfUser: boolean;
@@ -150,14 +150,13 @@ const Profile = ({ user, selfUser }: ProfileProps) => {
   const clerkUser = useUser();
   return (
     <section>
-
       <div className="flex justify-center pt-12">
         <Card className="p-4 w-full rounded-lg shadow-lg">
           <div className="flex justify-between lg:md:sm:flex-row-reverse flex-col">
             <Avatar className="w-32 h-32 rounded-full border-4 p-1 border-stone-200">
               <AvatarImage
                 className="rounded-full"
-                src={`${selfUser ? clerkUser.user?.imageUrl : user.image_url}`} />
+                src={`${selfUser ? clerkUser.user?.imageUrl : user.signup_image_url}`} />
               <AvatarFallback>
                 <User className="w-5 h-5" />
               </AvatarFallback>
