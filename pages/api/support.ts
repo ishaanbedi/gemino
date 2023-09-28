@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { getAuth } from "@clerk/nextjs/server";
 import { clerkClient } from "@clerk/nextjs";
 import axios from "axios";
-
 import { Resend } from "resend";
 import SupportEmailTemplate from "@/components/email-template";
 import SupportRequestAdmin from "@/components/admin-email-template";

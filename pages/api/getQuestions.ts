@@ -1,9 +1,7 @@
-// https://objective-brown.cmd.outerbase.io/get-level-data?level=${level}
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getAuth } from "@clerk/nextjs/server";
 import { clerkClient } from "@clerk/nextjs";
 import axios from "axios";
-
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse

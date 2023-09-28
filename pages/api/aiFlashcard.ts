@@ -1,5 +1,5 @@
 import { NextApiRequest as Request, NextApiResponse as Response } from "next";
-
+import { getAuth } from "@clerk/nextjs/server";
 import { OpenAI } from "openai";
 
 const openai = new OpenAI({
@@ -38,6 +38,11 @@ const schema = {
 };
 
 export default async function handler(req: Request, res: Response) {
+  const { userId } = getAuth(req);
+  if (!userId) {
+    res.status(401).json({ message: "Unauthorized" });
+    return;
+  }
   const response = await openai.chat.completions.create({
     model: "gpt-3.5-turbo-0613",
     messages: [

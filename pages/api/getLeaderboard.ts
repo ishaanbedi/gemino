@@ -1,5 +1,3 @@
-// https://objective-brown.cmd.outerbase.io/get-user-rank
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getAuth } from "@clerk/nextjs/server";
 import axios from "axios";
