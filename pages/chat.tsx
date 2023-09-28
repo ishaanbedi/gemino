@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useUser } from '@clerk/nextjs';
@@ -46,6 +47,31 @@ export default function Pg() {
     }, [user, userDataFetched]);
 
     return (<div className="min-h-[90vh] flex flex-col justify-between">
+        <NextSeo
+            title="Gemino - Chat with Bob"
+            description="Gemino is an AI powered language learning platform that helps you learn faster."
+            canonical="https://gemino.vercel.app/"
+            openGraph={{
+                url: 'https://gemino.vercel.app/',
+                title: 'Gemino',
+                description: 'Gemino is an AI powered language learning platform that helps you learn faster.',
+                images: [
+                    {
+                        url: `${process.env.NEXT_PUBLIC_BASE_URL}/og.png`,
+                        width: 800,
+                        height: 600,
+                        alt: 'Gemino',
+                        type: 'image/jpeg',
+                    },
+                ],
+                siteName: 'Gemino',
+            }}
+            twitter={{
+                handle: '@ishnbedi',
+                site: '@ishnbedi',
+                cardType: 'summary_large_image',
+            }}
+        />
         <ScrollArea className="h-[80vh] w-full p-4 no-scrollbar scroll-auto justify-end flex flex-col overflow-y-auto">
             {messages.length === 1 && (<div className="flex space-x-2 justify-center" >
                 <div className='flex flex-col text-center justify-center max-w-lg'>

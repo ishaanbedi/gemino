@@ -1,3 +1,4 @@
+import { NextSeo } from "next-seo";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useUser } from "@clerk/nextjs";
@@ -7,6 +8,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FlashcardArray } from "react-quizlet-flashcard";
+import Head from "next/head";
 
 interface FlashcardProps {
     words: {
@@ -95,6 +97,9 @@ const Flashcards: React.FC = () => {
     if (loadingFromAPI) {
         return (
             <section className="flex flex-col items-center justify-center text-center h-[83vh]">
+                <Head>
+                    <title>Gemino - Flashcards</title>
+                </Head>
                 <Loader className="animate-spin" />
             </section>
 
@@ -103,6 +108,31 @@ const Flashcards: React.FC = () => {
 
     return (
         <div>
+            <NextSeo
+                title="Gemino - Flashcards"
+                description="Gemino is an AI powered language learning platform that helps you learn faster."
+                canonical="https://gemino.vercel.app/"
+                openGraph={{
+                    url: 'https://gemino.vercel.app/',
+                    title: 'Gemino',
+                    description: 'Gemino is an AI powered language learning platform that helps you learn faster.',
+                    images: [
+                        {
+                            url: `${process.env.NEXT_PUBLIC_BASE_URL}/og.png`,
+                            width: 800,
+                            height: 600,
+                            alt: 'Gemino',
+                            type: 'image/jpeg',
+                        },
+                    ],
+                    siteName: 'Gemino',
+                }}
+                twitter={{
+                    handle: '@ishnbedi',
+                    site: '@ishnbedi',
+                    cardType: 'summary_large_image',
+                }}
+            />
             <section
                 className={`${startFlashcards ? "hidden" : "block"} h-[80vh] flex justify-center items-center text-center`}
             >

@@ -1,6 +1,32 @@
+import { NextSeo } from 'next-seo';
 const terms = () => {
     return (
         <div>
+            <NextSeo
+                title="Gemino - Terms and Conditions"
+                description="Gemino is an AI powered language learning platform that helps you learn faster."
+                canonical="https://gemino.vercel.app/"
+                openGraph={{
+                    url: 'https://gemino.vercel.app/',
+                    title: 'Gemino',
+                    description: 'Gemino is an AI powered language learning platform that helps you learn faster.',
+                    images: [
+                        {
+                            url: `${process.env.NEXT_PUBLIC_BASE_URL}/og.png`,
+                            width: 800,
+                            height: 600,
+                            alt: 'Gemino',
+                            type: 'image/jpeg',
+                        },
+                    ],
+                    siteName: 'Gemino',
+                }}
+                twitter={{
+                    handle: '@ishnbedi',
+                    site: '@ishnbedi',
+                    cardType: 'summary_large_image',
+                }}
+            />
             <div className="">
                 <h1 className="text-3xl font-semibold mb-4">Terms and Conditions</h1>
                 <p>Welcome to Gemino, an AI-powered language learning platform. By accessing or using Gemino, you agree to comply with and be bound by these Terms and Conditions. Please read them carefully.</p>

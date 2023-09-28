@@ -1,6 +1,32 @@
+import { NextSeo } from 'next-seo';
 const privacy = () => {
     return (
         <div className="min-h-screen py-12">
+            <NextSeo
+                title="Gemino - Privacy Policy"
+                description="Gemino is an AI powered language learning platform that helps you learn faster."
+                canonical="https://gemino.vercel.app/"
+                openGraph={{
+                    url: 'https://gemino.vercel.app/',
+                    title: 'Gemino',
+                    description: 'Gemino is an AI powered language learning platform that helps you learn faster.',
+                    images: [
+                        {
+                            url: `${process.env.NEXT_PUBLIC_BASE_URL}/og.png`,
+                            width: 800,
+                            height: 600,
+                            alt: 'Gemino',
+                            type: 'image/jpeg',
+                        },
+                    ],
+                    siteName: 'Gemino',
+                }}
+                twitter={{
+                    handle: '@ishnbedi',
+                    site: '@ishnbedi',
+                    cardType: 'summary_large_image',
+                }}
+            />
             <div className="container mx-auto p-4">
                 <h1 className="text-3xl font-semibold mb-4">Privacy Policy</h1>
 

@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo';
 import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -65,6 +66,31 @@ const SupportPage = () => {
   };
   return (
     <section className="py-12 flex justify-center items-center">
+      <NextSeo
+        title="Gemino - Support"
+        description="Get support from Gemino."
+        canonical="https://gemino.vercel.app/"
+        openGraph={{
+          url: 'https://gemino.vercel.app/',
+          title: 'Gemino',
+          description: 'Gemino is an AI powered language learning platform that helps you learn faster.',
+          images: [
+            {
+              url: `${process.env.NEXT_PUBLIC_BASE_URL}/og.png`,
+              width: 800,
+              height: 600,
+              alt: 'Gemino',
+              type: 'image/jpeg',
+            },
+          ],
+          siteName: 'Gemino',
+        }}
+        twitter={{
+          handle: '@ishnbedi',
+          site: '@ishnbedi',
+          cardType: 'summary_large_image',
+        }}
+      />
       <Card className="lg:md:sm:w-3/4 w-full p-4">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold mb-4">Support Request</h1>

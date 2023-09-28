@@ -1,12 +1,12 @@
 import useSWR from "swr";
 import axios from "axios";
+import { NextSeo } from 'next-seo';
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import NewLevel from "@/components/ui/new-level";
 import { Card } from "@/components/ui/card";
 import { Sparkles as BotButton, Brain, Loader, SeparatorVertical } from "lucide-react";
 import Image from "next/image";
-import { Input } from "@/components/ui/input";
 import GeminoDictionary from "@/components/gemino-dictionary";
 import { Separator } from "@/components/ui/separator"
 import Link from "next/link";
@@ -35,6 +35,31 @@ const Class = () => {
   }
   return (
     <div>
+      <NextSeo
+        title="Gemino - Classroom"
+        description="Gemino is an AI powered language learning platform that helps you learn faster."
+        canonical="https://gemino.vercel.app/"
+        openGraph={{
+          url: 'https://gemino.vercel.app/',
+          title: 'Gemino',
+          description: 'Gemino is an AI powered language learning platform that helps you learn faster.',
+          images: [
+            {
+              url: `${process.env.NEXT_PUBLIC_BASE_URL}/og.png`,
+              width: 800,
+              height: 600,
+              alt: 'Gemino',
+              type: 'image/jpeg',
+            },
+          ],
+          siteName: 'Gemino',
+        }}
+        twitter={{
+          handle: '@ishnbedi',
+          site: '@ishnbedi',
+          cardType: 'summary_large_image',
+        }}
+      />
       <div>
         {showStartButton && (
           <>

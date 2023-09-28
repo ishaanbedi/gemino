@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo';
 import React from "react";
 import { Flame, Trophy } from "lucide-react";
 import { Card } from "@/components/ui/card";
@@ -25,6 +26,31 @@ const Leaderboard: React.FC = () => {
 
   return (
     <section>
+      <NextSeo
+        title="Gemino - Leaderboard"
+        description="Gemino is an AI powered language learning platform that helps you learn faster."
+        canonical="https://gemino.vercel.app/"
+        openGraph={{
+          url: 'https://gemino.vercel.app/',
+          title: 'Gemino',
+          description: 'Gemino is an AI powered language learning platform that helps you learn faster.',
+          images: [
+            {
+              url: `${process.env.NEXT_PUBLIC_BASE_URL}/og.png`,
+              width: 800,
+              height: 600,
+              alt: 'Gemino',
+              type: 'image/jpeg',
+            },
+          ],
+          siteName: 'Gemino',
+        }}
+        twitter={{
+          handle: '@ishnbedi',
+          site: '@ishnbedi',
+          cardType: 'summary_large_image',
+        }}
+      />
       {!leaderboard ? (
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-2xl font-bold">Leaderboard</h1>

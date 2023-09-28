@@ -1,10 +1,36 @@
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/router";
-
+import { NextSeo } from 'next-seo';
 const TestFailedPage = () => {
     const router = useRouter();
     return (
         <div className="flex items-center justify-center mt-24">
+            <NextSeo
+                title="Gemino - Test Failed"
+                description="Gemino is an AI powered language learning platform that helps you learn faster."
+                canonical="https://gemino.vercel.app/"
+                openGraph={{
+                    url: 'https://gemino.vercel.app/',
+                    title: 'Gemino',
+                    description: 'Gemino is an AI powered language learning platform that helps you learn faster.',
+                    images: [
+                        {
+                            url: `${process.env.NEXT_PUBLIC_BASE_URL}/og.png`,
+                            width: 800,
+                            height: 600,
+                            alt: 'Gemino',
+                            type: 'image/jpeg',
+                        },
+                    ],
+                    siteName: 'Gemino',
+                }}
+                twitter={{
+                    handle: '@ishnbedi',
+                    site: '@ishnbedi',
+                    cardType: 'summary_large_image',
+                }}
+            />
+
             <div className="text-center text-xl">
                 <p className="mb-4">
                     Hey! If you are seeing this, it means that you have failed the test.

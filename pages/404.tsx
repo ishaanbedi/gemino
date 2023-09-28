@@ -1,10 +1,35 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-
+import { NextSeo } from 'next-seo';
 const NotFoundPage = () => {
     return (
         <div>
+            <NextSeo
+                title="Gemino - Page not found"
+                description="Gemino is an AI powered language learning platform that helps you learn faster."
+                canonical="https://gemino.vercel.app/"
+                openGraph={{
+                    url: 'https://gemino.vercel.app/',
+                    title: 'Gemino',
+                    description: 'Gemino is an AI powered language learning platform that helps you learn faster.',
+                    images: [
+                        {
+                            url: `${process.env.NEXT_PUBLIC_BASE_URL}/og.png`,
+                            width: 800,
+                            height: 600,
+                            alt: 'Gemino',
+                            type: 'image/jpeg',
+                        },
+                    ],
+                    siteName: 'Gemino',
+                }}
+                twitter={{
+                    handle: '@ishnbedi',
+                    site: '@ishnbedi',
+                    cardType: 'summary_large_image',
+                }}
+            />
             <div className="grid h-[80vh] px-4 place-content-center">
                 <div className="text-center">
                     <Image
@@ -22,7 +47,7 @@ const NotFoundPage = () => {
                     <div className="mt-6">
                         <Button>
                             <Link href="/">
-                                Start learning {process.env.NEXT_PUBLIC_COURSE} now
+                                Go back Home
                             </Link>.
                         </Button>
                     </div>

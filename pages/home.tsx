@@ -1,3 +1,4 @@
+import { NextSeo } from "next-seo";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
@@ -15,9 +16,33 @@ import FAQ from "@/components/faq";
 import StatFeatures from "@/components/statFeatures";
 import { useUser } from "@clerk/nextjs";
 const HomePage = () => {
-    const router = useRouter();
     return (
         <>
+            <NextSeo
+                title="Gemino - Home"
+                description="Gemino is an AI powered language learning platform that helps you learn faster."
+                canonical="https://gemino.vercel.app/"
+                openGraph={{
+                    url: 'https://gemino.vercel.app/',
+                    title: 'Gemino',
+                    description: 'Gemino is an AI powered language learning platform that helps you learn faster.',
+                    images: [
+                        {
+                            url: `${process.env.NEXT_PUBLIC_BASE_URL}/og.png`,
+                            width: 800,
+                            height: 600,
+                            alt: 'Gemino',
+                            type: 'image/jpeg',
+                        },
+                    ],
+                    siteName: 'Gemino',
+                }}
+                twitter={{
+                    handle: '@ishnbedi',
+                    site: '@ishnbedi',
+                    cardType: 'summary_large_image',
+                }}
+            />
             <HeroLanding />
             <div className="max-w-4xl mx-auto mt-20">
                 <FeatureSection />
