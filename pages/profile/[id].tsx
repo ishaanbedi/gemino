@@ -96,7 +96,7 @@ import { Button } from "@/components/ui/button";
 interface ProfileProps {
   user: {
     user_id: number;
-    signup_username: string;
+    username: string;
     overall_points: number;
     streak: number;
     current_level: number;
@@ -106,7 +106,6 @@ interface ProfileProps {
     id: string;
     image_url: string;
     last_name: string;
-    signup_image_url: string;
     first_name: string;
   };
   selfUser: boolean;
@@ -156,7 +155,7 @@ const Profile = ({ user, selfUser }: ProfileProps) => {
             <Avatar className="w-32 h-32 rounded-full border-4 p-1 border-stone-200">
               <AvatarImage
                 className="rounded-full"
-                src={`${selfUser ? clerkUser.user?.imageUrl : user.signup_image_url}`} />
+                src={`${selfUser ? clerkUser.user?.imageUrl : user.image_url}`} />
               <AvatarFallback>
                 <User className="w-5 h-5" />
               </AvatarFallback>
@@ -164,7 +163,7 @@ const Profile = ({ user, selfUser }: ProfileProps) => {
 
 
             <div className="mt-4">
-              <h1 className="text-2xl font-semibold">@{user.signup_username}</h1>
+              <h1 className="text-2xl font-semibold">@{user.username}</h1>
               <p className="text-primary/70">Joined {dateJoinedInWords}!</p>
               <div className="my-4 flex lg:md:sm:flex-row flex-col lg:md:sm:space-x-2 lg:md:sm:space-y-0 space-y-2">
                 {!selfUser && (
@@ -173,7 +172,7 @@ const Profile = ({ user, selfUser }: ProfileProps) => {
                       <DialogTrigger>
                         <Button className="w-full " variant={"secondary"}>
                           <Siren className="w-5 h-5 mr-2" />
-                          Report @{user.signup_username}
+                          Report @{user.username}
                         </Button>
                       </DialogTrigger>
                       <DialogContent>

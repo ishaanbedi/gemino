@@ -25,7 +25,7 @@ const Leaderboard: React.FC = () => {
   }
 
   return (
-    <section>
+    <section className='pb-24'>
       <NextSeo
         title="Gemino - Leaderboard"
         description="Gemino is an AI powered language learning platform that helps you learn faster."
