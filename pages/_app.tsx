@@ -8,6 +8,7 @@ import toast, { Toaster } from "react-hot-toast";
 import NextNProgress from 'nextjs-progressbar';
 import { League_Spartan } from "@next/font/google"
 import GeminoDictionary from "@/components/gemino-dictionary";
+import { Analytics } from '@vercel/analytics/react';
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
   weight: ['400', '500']
@@ -43,6 +44,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </main>
       </ClerkLoading>
       <Toaster />
+      <Analytics />
     </ClerkProvider>
   );
 }
