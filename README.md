@@ -95,7 +95,7 @@ Our support request architecture is designed for developer convenience and user 
 
 Experience Gemino live at [https://gemino.ishn.codes/](https://gemino.ishn.codes/).
 
-Read more about Gemino on Hashnode: TBA
+Read more about Gemino on Hashnode: https://www.blog.ishaanbedi.in/presenting-gemino-ai-powered-german-learning-application
 
 Gemino was developed during the [Outerbase](https://outerbase.com/) + [Hashnode](https://hashnode.com/) [hackathon](https://hashnode.com/hackathons/outerbase).
 ![](https://res.cloudinary.com/dhfhotfqs/image/upload/v1695969262/Screenshot_2023-09-29_at_12.04.14_PM_c1wh2u.png)
