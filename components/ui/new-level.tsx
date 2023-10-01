@@ -110,8 +110,8 @@ const NewLevel = ({ level }: { level: number }) => {
     <div>
       <>
         {showLoadingScreen && (
-          <section>
-            <Loader className="animate-spin mx-auto h-[80vh]" />
+          <section className="flex justify-center items-center">
+            <Loader className="animate-spin" />
           </section>
         )}
       </>
