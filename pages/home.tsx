@@ -242,7 +242,7 @@ const OpenSourceFeature = () => {
         },
         {
             title: "Clerk",
-            svg: <img src="https://pbs.twimg.com/profile_images/1578509813218127873/W9i11EoA_400x400.jpg" alt="clerk" className="h-6 grayscale" />,
+            svg: <img src="https://images.crunchbase.com/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/a1iakwzbac96qzymzwtq" alt="clerk" className="h-6 grayscale" />,
             hoverDescription: "Gemino uses Clerk as the authentication provider and for user management.",
         },
         {
