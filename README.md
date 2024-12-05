@@ -2,8 +2,10 @@
 
 ![Gemino Logo](https://cdn.hashnode.com/res/hashnode/image/upload/v1695894796826/beeb40ab-3b7b-4882-8344-823e46116440.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)
 
-### Update 
+### Update (2024)
 This project is now archived because of some changes in Outerbase's offerings and a lack of time on my side to maintain and update it regularly. You can always download the code and try playing with it :)
+
+
 Gemino is a free and open-source AI-powered platform designed to make the journey of learning German fun, engaging, and effective.
 
 ## What is Gemino?
